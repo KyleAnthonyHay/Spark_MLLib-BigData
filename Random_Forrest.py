@@ -4,9 +4,6 @@ from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml.feature import StringIndexer, VectorAssembler
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
-print("Starting Spark Session")
-
-# Initialize a Spark session
 spark = SparkSession.builder.appName(
     "CancerDiagnosisRandomForest").getOrCreate()
 
