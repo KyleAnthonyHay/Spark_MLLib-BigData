@@ -6,11 +6,12 @@ from pyspark.ml.classification import RandomForestClassifier
 from pyspark.ml.feature import StringIndexer, VectorAssembler
 from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 
+print("Logistic Regression Implementation\n\n")
 
 spark = SparkSession.builder.appName(
     "CancerDiagnosisRandomForest").getOrCreate()
-# Loading Dataset
 
+# Loading Dataset
 data = spark.read.csv('./project3_data.csv', header=True, inferSchema=True)
 
 # Preprocessing
